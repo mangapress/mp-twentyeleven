@@ -5,6 +5,12 @@
  * @version $Id$
  * @author Jess Green <jgreen@psy-dreamer.com>
  */
+
+function mp_twenty_eleven_load_theme_textdomain() {
+    load_theme_textdomain('mp-twentyeleven', get_stylesheet_directory() . '/languages');
+}
+add_action( 'after_setup_theme', 'mp_twenty_eleven_load_theme_textdomain' );
+
 add_action('admin_init', '_disable_options_init');
 /**
  * Run the action that disables the insert_nav option.
